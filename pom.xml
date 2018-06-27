@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>io.github.lhing17</groupId>
+	<groupId>io.github.ee</groupId>
 	<artifactId>fan</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>fan</name>
 	<description>contrast to zheng</description>
@@ -25,8 +25,8 @@
 	</properties>
 
 	<modules>
-		<!-- 服务管理模块-->
-		<module>fan-sys</module>
+		<!--&lt;!&ndash; 服务管理模块&ndash;&gt;-->
+		<!--<module>fan-sys</module>-->
 		<!-- 实体、接口、一些公用的工具类模块-->
 		<module>fan-common</module>
 		<!-- 服务提供模块-->
@@ -34,8 +34,12 @@
 		<!-- 服务消费模块-->
 		<module>fan-consumer</module>
 	</modules>
-
+	<dependencyManagement>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
@@ -80,5 +84,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	</dependencyManagement>
 </project>
