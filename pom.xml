@@ -25,16 +25,22 @@
 	</properties>
 
 	<modules>
-		<!--&lt;!&ndash; 服务管理模块&ndash;&gt;-->
-		<!--<module>fan-sys</module>-->
 		<!-- 实体、接口、一些公用的工具类模块-->
 		<module>fan-common</module>
-		<!-- 服务提供模块-->
+
+		<!--界面化模块-->
 		<module>fan-web</module>
-		<!-- 服务消费模块-->
-		<module>fan-consumer</module>
+
+		<!-- 服务消费者模块-->
+		<module>fan-client</module>
+
+		<!--服务提供接口模块 -->
+		<module>fan-api</module>
+
+		<!-- 服务提供者模块-->
+		<module>fan-provider</module>
+		<module>fan-client</module>
 	</modules>
-	<dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -83,6 +89,11 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<version>0.2.0</version>
+		</dependency>
 	</dependencies>
-	</dependencyManagement>
 </project>

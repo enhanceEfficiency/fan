@@ -5,24 +5,16 @@
         <groupId>io.github.ee</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>fan-consumer</artifactId>
+    <artifactId>fan-client</artifactId>
     <packaging>jar</packaging>
-
-
-    <properties>
-        <start-class>clientApplication</start-class>
-    </properties>
-
-    <build>
-        <finalName>fan-consumer</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <name>Maven Quick Start Archetype</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>io.github.ee</groupId>
+            <artifactId>fan-provider</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
